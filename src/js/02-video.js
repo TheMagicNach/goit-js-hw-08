@@ -13,17 +13,5 @@ const player = new Vimeo.Player(iframeEl);
   );
 
 player
-  .setCurrentTime(localStorage.getItem('videoplayer-current-time'))
-  .then(function (seconds) {})
-  .catch(function (error) {
-    switch (error.name) {
-      case 'RangeError':
-        
-        break;
-
-      default:
-        
-        break;
-    }
-  });
+  .setCurrentTime(localStorage.getItem('videoplayer-current-time')|| 0 );
 
